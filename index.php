@@ -1,84 +1,37 @@
 <?php
 require_once 'App/init.php';
 
-$hp1 = new Oppo("Oppo", "Realme 9 Pro+", "1");
-$hp2 = new Xiaomi("Xiaomi", "Note 9", "2");
-$hp3 = new Xiaomi("Xiaomi", "Note 10", "3");
-$hp4 = new Samsung("Samsung", "Galaxy Z Flip4", "4");
+// Tipe Produk
+$XiaomiNote9 = new Xiaomi("Xiaomi", "Note 9", 0);
+$XiaomiNote10 = new Xiaomi("Xiaomi", "Note 10", 0);
 
-echo $hp1->getvolume();
-echo "<br>";
-echo $hp1->volumeDown(0);
-echo "<br>";
-echo $hp1->getvolume();
-echo "<br>";
-echo $hp1->volumeDown(0);
-echo "<br>";
-echo $hp1->getvolume();
-echo "<br>";
-echo $hp1->capture();
-echo "<br>";
+$SamsungGalaxy = new Samsung("Samsung", "Samsung Galaxy Z Flip4", 0);
 
-echo "<hr>";
+$OppoRealme = new Oppo("Oppo", "Oppo Realme 9 Pro", 0);
 
-echo $hp2->nyalakan();
-echo "<br>";
-echo $hp2->matikan();
-echo "<br>";
 
-echo "<hr>";
 
-echo $hp3->UI();
-echo "<br>";
-echo $hp3->setUIVersion(12);
-echo "<br>";
-echo $hp3->UI();
+//Daftar Produk
+$daftarHape = new App();
+$daftarHape->tambahTipe($XiaomiNote9);
+$daftarHape->tambahTipe($XiaomiNote10);
+$daftarHape->tambahTipe($SamsungGalaxy);
+$daftarHape->tambahTipe($OppoRealme);
+echo $daftarHape->cetak();
 
-echo "<hr>";
 
-echo $hp4->getvolume();
-echo "<br>";
-echo $hp4->volumeUp(5);
-echo "<br>";
-echo $hp4->getvolume();
-echo "<br>";
-echo $hp4->volumeUp(5);
-echo "<br>";
-echo $hp4->getvolume();
-echo "<br>";
-echo $hp4->volumeUp(5);
-echo "<br>";
-echo $hp4->getvolume();
-echo "<br>";
-echo $hp4->volumeUp(5);
-echo "<br>";
-echo $hp4->getvolume();
-echo "<br>";
-echo $hp4->volumeUp(5);
-echo "<br>";
-echo $hp4->getvolume();
-echo "<br>";
-echo $hp4->volumeUp(5);
-echo "<br>";
-echo $hp4->getvolume();
-echo "<br>";
-echo $hp4->volumeUp(5);
-echo "<br>";
-echo $hp4->getvolume();
-echo "<br>";
-echo $hp4->volumeUp(5);
-echo "<br>";
-echo $hp4->getvolume();
-echo "<br>";
-echo $hp4->volumeUp(5);
-echo "<br>";
-echo $hp4->getvolume();
-echo "<br>";
-echo $hp4->volumeUp(5);
-echo "<br>";
-echo $hp4->getvolume();
 
-echo "<hr>";
+
+
+
+
+
+
+
+
+
+
+
 
 
 ?>
